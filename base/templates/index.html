@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+
+    <div  class="container-fluid py-2   " style="background-image: linear-gradient(to bottom,rgb(13 13 14/71%),rgb(100 19 31/69%)), url({% static './img/Stadium.jpg' %}); width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover;" data-wow-delay="0.1s">
+        
+        
+      <div class="container py-3">
+          <div class="bg row g-0" >
+              <div class="  col-lg-12 ">
+                  <div class="col gx-0 col-lg-8 text-left text-lg-start mb-4 mb-lg-0">
+                      <div class="col align-items-left">
+                          <small class="me-1 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small><br>
+                          <small class="me-1 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small><br>
+                          <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small><br>
+                      </div>
+                  </div>
+                  <div class="section-title position-relative pb-1 mb-3">
+                      <h3 class="mb-0 text-primary">Providing winning advice since 2010.</h3>
+                      <h5 class=" text-light text-light text-uppercase">Grazia B. Tipster,</h5>
+                      <h5 class=" mb4 text-light text-uppercase">602-604 Pershore Road,</h5>
+                      <h5 class=" text-light text-uppercase">Balti Triangle, Birmingham,B13 7HQ.</h5>
+                  </div>
+                  <h3 class="mb-1 text-primary" >RE: PROVISION OF THE FIXED TICKET FOR THE MATCH (FEE 68.00)</h3>
+                  
+              
+                  <div class="container">
+                      <div class="row">
+                          <div class="col">
+                            <h5 class="fw mb4 align-center text-light text-uppercase container">Last week game</h5>
+                            <table class="table col-4">
+                              <thead>
+                                <tr>
+                                  <th scope="col">COUNTRY</th>
+                                    <th scope="col">GAME</th>
+                                    <th scope="col">TIP</th>
+                                    <th scope="col">ODD</th>
+                                  </tr>
+                              </thead>
+                            <tbody>
+
+                              {% for game in lastWeek %}
+                              <tr>
+                                <th scope="row">{{game.country}}</th>
+                                <td>{{game.home}}vs{{game.away}}</td>
+                                <td>tip</td>
+                                <td>{{game.odd}}</td>
+                                
+                              </tr>
+                              
+                              {% endfor %}
+                              
+                            </tbody>
+                              </table>
+                          </div>
+                          <div class="col">
+                              <h5 class="fw mb4 align-center text-light text-uppercase">Todays game</h5>
+                              <table class="table ">
+                                  <thead>
+                                      <tr>
+                                      <th scope="col">COUNTRY</th>
+                                      <th scope="col">GAME</th>
+                                      <th scope="col">TIP</th>
+                                      <th scope="col">ODD</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+
+                                    {% for game in today %}
+                                    <tr>
+                                      <th scope="row">{{game.country}}</th>
+                                      <td>{{game.home}}vs{{game.away}}</td>
+                                      <td>tip</td>
+                                      <td>{{game.odd}}</td>
+                                      
+                                    </tr>
+                                    
+                                    {% endfor %}
+                                    
+                              </table>
+                          </div>
+                          <div class="col">
+                              <h5 class="fw mb4 align-center text-light text-uppercase">Next week game</h5>
+                              <table class="table ">
+                                  <thead>
+                                      <tr>
+                                      <th scope="col">COUNTRY</th>
+                                      <th scope="col">GAME</th>
+                                      <th scope="col">TIP</th>
+                                      <th scope="col">ODD</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+
+                                    {% for game in next %}
+                                    <tr>
+                                      <th scope="row">{{game.country}}</th>
+                                      <td>{{game.home}}vs{{game.away}}</td>
+                                      <td>tip</td>
+                                      <td>{{game.odd}}</td>
+                                      
+                                    </tr>
+                                    
+                                    {% endfor %}
+                                    
+                              </table>
+                          </div>
+                      </div>  
+                  </div>
+                  
+              </div>  
+          </div>    
+                  
+                  <p class="mb-1 text-light">Send Money To This Email and Send me a screenshot for verification and reference purpose to whatsapp</p>
+                  <p class="mb-1 text-light">denniskiprono248@gmail.com</p>
+                  <div class="row g-0 mb-3">
+                      <div class="col-sm-4 wow zoomIn" data-wow-delay="0.2s">
+                          <h5 class="mb-1 text-light"><i class="fa fa-check text-primary me-3"></i>Verified Skrill acount</h5>
+                          <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="60" height="40" data-wow-delay="0.1s" src="{% static 'img/skrill-logo.jfif' %}" style="object-fit: cover;">
+                          <a href="https://account.skrill.com/wallet/ng/dashboard?locale=en" class="btn btn-primary py-2 px-4  wow zoomIn" data-wow-delay="0.9s">pay</a>
+                          <div class="col-lg-4 text-center float-left col text-lg-end">
+                              <div class="d-inline-flex bg-transparent py-2 px-5 mb-1 row rounded align-items-center" style="height: 45px;">
+                                  <a class="btn btn-md btn-outline-light mb-1 me-2" href="http://www.facebook.com/realfixedinformationcentre"><i class="fab fa-facebook-f fw-normal"></i><span>Facebook</span></a>
+                                  <a class="btn btn-md btn-outline-light mb-1 me-2" href="https://wa.me//447449748742"><i class="fab fa-whatsapp fw-normal"><span> whatsapp</span></i></a>
+                                  <a class="btn btn-md btn-outline-light mb-1 me-2" href="https://t.me/+MERPUkXPnWBiNzQ0"><i class="fab fa-telegram fw-normal"> Telegram</i></a>
+                              </div>
+                          </div>
+                      
+                      </div>
+                      {% comment %} <div class="col-sm-4 " data-wow-delay="0.4s">
+                          <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="500" height="230" data-wow-delay="0.1s" src="{% static 'img/offer.jfif' %}" style="object-fit: cover;">
+                          
+                      </div> {% endcomment %}
+                  </div>
+                  
+                  
+                  {% comment %} <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="60" height="40" data-wow-delay="0.1s" src="{% static 'img/skrill-logo.jfif' %}" style="object-fit: cover;"> {% endcomment %}
+              </div>
+              
+          </div>
+      </div>
+      
+  </div>
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact py-2" style="background-color: #f5f5f5;" >
+          <div class="container py-2">
+              <div class="row g-5">
+                  <h4 class="text-success mb-1 text-center">Contact</h4>
+                  <div class="col-xl-6">
+                      <div class="wow fadeInUp" data-wow-delay="0.2s">
+                          <div class="rounded p-3 mb-5" style="visibility: visible; background-color: #cdf6de">
+                              <h4 class="text-success mb-4">Get in Touch</h4>
+                              <div class="row g-4">
+                                  <div class="col-md-6">
+                                      <div class="contact-add-item">
+                                          <div class="contact-icon text-primary mb-4">
+                                              <a class="btn btn-primary btn-lg-square  me-2" href="http://www.facebook.com/realfixedinformationcentres"><i class="fab fa-facebook-f fs-4 text-white"></i></a>
+                                          </div>
+                                          <div>
+                                              <h4>Facebook</h4>
+                                              
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="contact-add-item">
+                                          <div class="contact-icon text-success mb-4">
+                                              <a class="btn btn-primary btn-lg-square  me-2" href="https://wa.me//447449748742"><i class="fab fa-whatsapp fs-4"> </i></a>
+                                  
+                                          </div>
+                                          <div>
+                                              <h4>whatsapp</h4>
+                                              
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="contact-add-item">
+                                          <div class="contact-icon text-primary mb-4">
+                                              <a class="btn btn-primary btn-lg-square " href="https://t.me/+MERPUkXPnWBiNzQ0"><i class="fab fa-telegram fs-4 text-light"> </i></a>
+                                          </div>
+                                          <div>
+                                              <h4>Telegram</h4>
+                                              
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="contact-add-item">
+                                          <div class="contact-icon text-primary mb-4">
+                                              <i class="fab fa-firefox-browser fa-2x"></i>
+                                          </div>
+                                          <div>
+                                              <h4>Real Fixed Information Center</h4>
+                                              
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </div>
+                  <div class="col-xl-6 wow fadeInRight"  data-wow-delay="0.2s">
+                      <div class=" p-5 rounded h-100 wow fadeInUp" style="visibility: visible; background-color: #cdf6de" data-wow-delay="0.2s">
+                          <h4 class="text-primary">Send Your Message</h4>
+                          <p class="mb-4">You can reach us </a>.</p>
+                          <form>
+                              <div class="row g-4">
+                                  <div class="col-lg-12 col-xl-6">
+                                      <div class="form-floating">
+                                          <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                          <label for="name">Your Name</label>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12 col-xl-6">
+                                      <div class="form-floating">
+                                          <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                          <label for="email">Your Email</label>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="col-12">
+                                      <div class="form-floating">
+                                          <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                                          <label for="message">Message</label>
+                                      </div>
+
+                                  </div>
+                                  <div class="col-12">
+                                      <button class="btn btn-primary w-100 py-3">Send Message</button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Contact End -->
+  
+
+      <footer id="footer" class="footer position-relative "  style="background-color: #f8fbfc;">
+
+          <div class="container mt-4 footer-top">
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6 footer-about">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <span class="sitename">QuickStart</span>
+                </a>
+                  <div class="row"> 
+                      <div class="footer-contact col-6 pt-3">
+                          <p>A108 Adam Street</p>
+                          <p>New York, NY 535022</p>
+                          <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                          <p><strong>Email:</strong> <span>info@example.com</span></p>
+                      </div>
+                      <div class="social-links d-flex-col col-6 mt-4">
+                          
+                          <a href=""><i class="bi bi-facebook row mt-4 px-4"></i></a>
+                          <a href=""><i class="bi bi-telegram row mt-4 px-4"></i></a>
+                          <a href=""><i class="bi bi-whatsapp row mt-4 px-4"></i></a>
+                      </div>
+                  </div>
+              
+              </div>
+      
+              
+      
+          <div class="container copyright text-center ">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">QuickStart</strong><span>All Rights Reserved</span></p>
+            
+          </div>
+
+        </footer>
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+<div class="container">
+    <div class="row mb-2 text-center">
+    <div class="col-lg-12 col-md-12 desktop">
+    </div>
+    <div class="col-lg-12 col-md-12 mobile">
+    </div>
+    </div>
+    <style>
+                .bg-black {
+                    background-color: #000;
+                }
+            </style>
+    <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-8 mt-4">
+    <div class="section-title mb-2">
+    <h1 class="">FOOTBALL PREDICTIONS</h1>
+    </div>
+    <p class="text-justify">
+    Betensured is the best football prediction website.
+    </p>
+    <p class="text-justify">
+    Betensured guarantees accurate football predictions on every market available. Our dedicated team of expert analysts and Tipsters works diligently every day to deliver winning predictions for your football betting endeavors.
+    </p>
+    <p class="text-justify">
+    At Betensured, our primary focus is on profitability, and we are committed to providing sure predictions tailored to your preferences. We have various predictions for the low-stakes and high stakes. Our predictions include double chance, Over 2.5 goals, Under 2.5 goals straight winnings, GG/BTTS, and 1.5 goals, amongst others. We also provide accumulators ranging from 50 odds, 100 odds and many more. We are here to make you have more winnings. We have been operating for quite a while and readily dish out accurate soccer predictions that will make your day. You need not look further for any of your football prediction problems and dilemmas. Betensured will solve your problems. You may have experienced losses as all people do, but all that will be in the past now if you move forward with us. It is possible to have more winnings and fewer losses with betting; working with us will guarantee you profits for your efforts.
+    </p>
+    <p class="text-justify">
+    Betensured is not just a football prediction site; it is a comprehensive betting tips with statistics from over 200 football leagues and all betting markets. Stick with us, and you'll find solutions to all your betting prediction issues. A trial will undoubtedly convince you of the reliability and accuracy of our predictions. Spread the word to your friends and bask in continuous victories with Betensured. May your tickets be green.
+    </p>
+    <p class="text-justify">
+    If you have any questions, <a href="contact">you can contact us here.</a>.
+    </p>
+    </div>
+    </div>
+    <style>
+                .qlabel, .alabel {
+                    padding: 6px 10px;
+                    background: red;
+                    color: #fff;
+                }
+                .alabel{
+                    background: black;
+                    font-weight: bold;
+                }
+                #accordion .card {
+                    margin-bottom:15px;
+                }
+            </style>
+    
+    </div>
+    
+    
+    <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-8 mt-4">
+    <div class="section-title mb-2">
+    <h2 class="">Daily Value Bet</h2>
+    </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 ">
+    <p class="text-justify">
+    Brings you a carefully curated combination of matches with odds of 1.50 and above.
+    Our team of experienced experts works tirelessly to identify matches that offer excellent value and turn your passion for sports into potential profit.
+    We understand the importance of responsible betting and these value bets are designed to offer a balance between attractive odds and a reasonable level of risk.
+    These Daily Value Bet isn't limited to a single sport as it also covers a wide range of sports, from football (soccer) to basketball, tennis, and more.
+    </p>
+    </div>
+    </div>
+    
+    
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Javascript -->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

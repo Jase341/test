@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RealFIxed Matches Information Center</title>
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static './css/style.css' %}" rel="stylesheet">
+</head>
+<body class="bg-dark">
+    <a class="text-success h3" href="/">Home</a>
+    
+    <article class="blog-post border m-4 m-sm-1 mobile" >
+        <h2 class="display-5 link-body-emphasis text-warning text-center py-3 mb-1">ARCHIVE HT/FT FIXED MATCHES</h2>
+        <p class="blog-post-meta px-2 text-light">September 18, 2024 by <a href="#">Grazia Pronostiqueur</a></p>
+        
+        <p class="text-light" style="text-align: center;">Buy Betting Matches Tips</p>
+        <h2 class="text-light" style="text-align: center;" class="text-center"><strong>Buy Fixed Matches </strong></h2>
+        <p class="text-light" style="text-align: center;">Here you can See All Sold HT/FT Fixed Matches</p>
+        <hr style="text-align: center;" class="text-center wi" style="width: 50%; height:3px;">
+        
+
+          <table class="table table-responsive-sm h6 h-sm-6 table-sm table-bordered">
+            <thead>
+              <tr>
+                <th class="text-warning text-center" scope="col">DATE</th>
+                <th class="text-warning text-center" scope="col">MATCH</th>
+                <th class="text-warning text-center" scope="col">ODD</th>
+                <th class="text-warning text-center" scope="col">TIP</th>
+                <th class="text-warning text-center" scope="col">PROBABILITY</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for game in lastWeek %}
+                <tr>
+                    <th class="text-light"  scope="row">{{game.time|date:"d/m/Y"}}</th>
+                    <td class="text-light" >{{game.country}} - {{game.away}}</td>
+                    <td class="text-light" >{{game.odd}}</td>
+                    <td class="text-light" >{{game.tip}}</td>
+                    <td class="text-light" >100%</td>
+                </tr>
+              {% endfor %}
+              
+            </tbody>
+          </table>
+        
+        
+    </article>
+
+<footer class="entry-footer cf">
+
+
+        <div class="entry-updated updated text-light">
+        Updated: September 9, 2024 — 12:05 pm		</div>
+
+        
+
+</footer>
+
+
+
+</body>
+</html> 
