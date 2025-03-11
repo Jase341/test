@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>Real Fixed Information Centre</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static './img/download.jfif' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static './css/style.css' %}" rel="stylesheet">
+</head>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0" style="background-color: #EEF9FF;">
+    
+    <header class="d-flex flex-wrap justify-content-center navbar-expand-lg py-3 bg-dark  border-bottom" data-bs-theme="dark">
+        
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">Real Fixed Information Center</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="/" class="nav-link">Today's Fixed Matches</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#terms" class="nav-link">Terms and Conditions</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        </ul>
+    </header>
+    
+    <section class="blog-post">
+        <div  class=" " style="background-image: linear-gradient(to bottom,rgb(13 13 14/71%),rgb(100 19 31/69%)), url({% static './img/Stadium.jpg' %}); min-height: 100vh; width: 100%; height: auto; background-repeat: no-repeat; background-size: cover;" data-wow-delay="0.1s">
+            <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner"></div>
+            </div>
+            <div class=" ">
+                <div class=" px-3">
+                    <div class="col px-3 gx-0 col-lg-8 text-left text-lg-start mb-4 mb-lg-0">
+                        <div class="section-title position-relative pb-1 mb-3">
+                            <br><br>
+                            <p class="text-justify text-light fs-sm-6">
+                                Football betting is an exhilarating experience, whether enjoying a rousing victory or enduring a crushing defeat. However, without proper guidance and knowledge, it can become a high-risk venture. Every day, football fans around the globe seek websites and platforms that offer accurate predictions and sustained profits over the long term.
+                                <br>
+                            Our service offers precisely this guidance, providing reliable predictions to ensure your betting experience is both enjoyable and profitable. We understand that convenience is crucial, so we accept a wide range of payment methods, including all cryptocurrencies such as Bitcoin, Binance, and Paxful. Additionally, we accept payments through PayPal, Skrill, Neteller, Airtel Money, Mukuru, Vodafone, Mpesa, Eversend, Apple Pay, Wise, Western Union, Remitly, World Remit, Ria Money and Money Gram.
+                            <br>
+                            Enjoy a secure and informed betting experience with our expert predictions. Join many football fans who trust our service to enhance their betting strategies.
+                            </p>
+                        </div>
+    
+                        <h3 class="mb-1 text-success text-uppercase">TODAY'S FIXED GAMES</h3>
+                        <video width="320" height="240" controls autoplay class="object-fit-covemx-auto rounded d-block ">
+                            <source src="{% static './video/video1.mp4'%}" type="video/mp4" >
+                          </video>
+
+                        
+
+    
+                        <div class="table-responsive">
+                            <table class="table table-responsive-sm h6 h-sm-6 table-sm table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th class="text-warning text-center" scope="col">DATE</th>
+                                    <th class="text-warning text-center" scope="col">MATCH</th>
+                                    <th class="text-warning text-center" scope="col">ODD</th>
+                                    <th class="text-warning text-center" scope="col">TIP</th>
+                                    <th class="text-warning text-center" scope="col">PROBABILITY</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    {% for game in today %}
+                                    <tr>
+                                        <th class="text-light"  scope="row">{{game.time|date:"d/m/Y"}}</th>
+                                        <td class="text-light" >{{game.country}} - {{game.away}}</td>
+                                        <td class="text-light" >{{game.odd}}</td>
+                                        <td class="text-light" >{{game.tip}}</td>
+                                        <td class="text-light" >100%</td>
+                                    </tr>
+                                  {% endfor %}
+    
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+                <p class="mb-1 mx-2 text-light">Our Free fixed matches are available in our this Telegram link  <a href="https://t.me/+MERPUkXPnWBiNzQ0">click here</a> </p>
+                <p class="mb-1 mx-2 text-light">Our payments methods are available in all countries and confirmation takes less than 30 minutes</p>
+                <div class="row g-0 mb-3">
+                    <div class="col-sm-12 mx-2 wow pb-2 " data-wow-delay="0.2s">
+    
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/skrill-logo.jfif' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/bitcoin.jfif' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/apple-pay.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/Neteller.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/paypal.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/airtel.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/wise.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/vodafone.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/mukuru.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/mpesa.jfif' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/eversend.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/world-remit.jfif' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/paxful.png' %}" style="object-fit: cover;">
+                        <img class="position-relative  w-10 h-10 rounded wow zoomIn" width="63" height="40" data-wow-delay="0.1s" src="{% static 'img/remmitly.jfif' %}" style="object-fit: cover;">
+                        <a href="https://account.skrill.com/wallet/ng/dashboard?locale=en" class="btn btn-warning py-2 px-4  wow zoomIn" data-wow-delay="0.9s">pay</a>
+                        
+                    </div>
+    
+                </div>
+    
+                </div>
+            </div>
+    
+        </div>
+        </section>
+    
+
+    <article class="blog-post m-sm-1 p-sm-1 m-1 p-1 border">
+        
+        <hr>
+        <h2 class="text-center text-warning">Next HT/FT Fixed Matches</h2>
+        <p class="text-center">Halftime/Fulltime :  [1/X] - 15.00</p>
+        <p class="text-center">Fulltime Correct Score : [1-0] - 10.00</p>
+        <blockquote class="blockquote">
+        <p class="text-center">To purchase these games in advance just click any of these link👇</p>
+        </blockquote>
+
+
+        <p class="text-center">Telegram Chat👇<a href=" https://t.me/m/19TCqJBZYmEx"> https://t.me/m/19TCqJBZYmEx</a></p>
+        <p class="text-center">WhatsApp Chat👇 <a href="https://wa.me//447414254714">https://wa.me//447414254714</a></p>
+        <p class="text-center">Send Email to👇<a href="#"> realfixedinformationcentre@gmail.com</a></p>
+
+
+        <hr>
+
+        <img src="{% static './img/photo1.jpeg' %}" class="img-fluid rounded mx-auto d-block max-width-70%" style="background-reat: no-repeat; max-width: 50%; max-height: 60%;">
+    </article>
+
+
+    <article id="post-1293" class="blog-post border m-5 m-sm-1">
+
+
+        <p style="text-align: center;"><strong><span style="font-size: 12pt;"><span style="font-family: georgia, serif;"><em><span style="font-family: georgia, serif;">REAL MOBILE BET365 PROOF OF FIXED MATCH HALF TIME FULL TIME:</span></em></span></span></strong></p>
+        <hr>
+        <p style="text-align: center;"><span style="font-size: 14pt; font-family: 'arial black', sans-serif;"><strong><em>NEW MOBILE<span style="color: #00ff00;"> WHATSAPP &amp; BET365 </span>PROOF FROM&nbsp; (07/09/2024) <span style="color: #ffffff;"><span style="color: #00ff00;"></span></span></em></strong></span></p>
+        <p><a href="/" target="_blank" rel="attachment noopener wp-att-10831">{% for image in images %}{% if forloop.revcounter == 2 %}<img src="{{ image.image.url }}" decoding="async" class="img-fluid rounded mx-auto d-block max-width-70%" style="background-reat: no-repeat; max-width: 50%; max-height: 60%;" />{% endif %}{% endfor %}</noscript></a></p>
+        <table style="height: 34px; width: 95%;">
+        <caption><strong><span style="font-size: 16px;">HT/FT FIXED MATCH OUTCAME FROM DATE: <span style="background-color: #000000; color: #00ff00;">07/09/2024 WON</span></span></strong></caption>
+        
+        </table>
+        <hr>
+        <p style="text-align: center;">
+            <p style="text-align: center;"><span style="font-size: 14pt; font-family: 'arial black', sans-serif;"><strong><em>NEW MOBILE<span style="color: #00ff00;"> WHATSAPP &amp; BET365 </span>PROOF FROM&nbsp; (07/09/2024) <span style="color: #ffffff;"><span style="color: #00ff00;"></span></span></em></strong></span></p>
+            <p><a href="/" target="_blank" rel="attachment noopener wp-att-10831">{% for image in images %} {% if forloop.last %}<img src="{{ image.image.url }}" decoding="async" class="img-fluid mx-auto rounded d-block min-width-70%" style="background-repeat: no-repeat; max-width: 50%; max-height: 60%;" />{% endif %} {% endfor %}</noscript></a></p>
+            
+            <caption><strong><span style="font-size: 16px;">HT/FT FIXED MATCH OUTCAME FROM DATE: <span style="background-color: #000000; color: #00ff00;">07/09/2024 WON</span></span></strong></caption>
+            
+        <p>&nbsp;</p>
+
+        <hr>
+        <p>&nbsp;</p>
+        
+        </div>
+
+        </article>
+
+    <article class="blog-post border m-2 m-sm-1 mobile" >
+        
+        <hr>
+        <p class="text-center">Daily Fixed Matches 100% Sure</p>
+        <h2 class="text-center text-warning">Daily Fixed Matches 100% Sure</h2>
+        <p>If you want Fixed Matches every day this is offer for you!</p>
+        <p class="text-center">Subscribe now – Every day one Fixed Match!</p>
+        <h3 class="text-center text-warning">Odds between 2.00 – 3.00 Every Day</h3>
+        <blockquote class="blockquote">
+            <p class="text-center">To purchase these games in advance just click any of these link👇</p>
+        </blockquote>
+    
+    
+        <p class="text-center">Telegram Chat👇<a href=" https://t.me/m/19TCqJBZYmEx"> https://t.me/m/19TCqJBZYmEx</a></p>
+        <p class="text-center">WhatsApp Chat👇 <a href="https://wa.me//447414254714">https://wa.me//447414254714</a></p>
+        <p class="text-center">Send Email to👇<a href="#"> realfixedinformationcentre@gmail.com</a></p>
+
+       
+
+    </article>
+
+    <article class="blog-post border m-1 m-sm-0" >
+        <div class="container">
+            <div class="row mb-2 text-center">
+            <div class="col-lg-12 col-md-12 desktop">
+            </div>
+            <div class="col-lg-12 col-md-12 mobile">
+            </div>
+            </div>
+            <style>
+                        .bg-black {
+                            background-color: #000;
+                        }
+                    </style>
+            <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-8 mt-4">
+            <div class="section-title mb-2">
+            <h1 class="">FOOTBALL PREDICTIONS</h1>
+            </div>
+            <p class="text-justify">
+                Discover the Best Football Prediction Website Today!
+                Dear Football Enthusiast,
+            </p>
+            <p class="text-justify">
+                I hope this message finds you well. I am writing to introduce you to Real Fixed Matches Information Center, the ultimate solution for all your football prediction needs.
+            </p>
+            <p class="text-justify">
+                At Real Fixed Matches Information Center, we guarantee accurate football predictions across every market available. Our dedicated team of expert analysts and tipsters works tirelessly each day to deliver winning predictions tailored to your betting preferences.
+            </p>
+            <p class="text-justify">
+                Our primary focus is profitability, ensuring you receive reliable predictions. We offer a variety of predictions for both low-stakes and high-stakes bettors, including Correct Score, Total Goals, straight wins, and BTTS. Additionally, we provide accumulators ranging from 25 to 70 odds.
+            </p>
+            <p class="text-justify">
+                Operating for quite some time, we pride ourselves on providing accurate soccer predictions that can transform your betting experience. You no longer need to worry about your football prediction problems and dilemmas; we are here to solve them. Although you may have experienced losses in the past, sticking with us will ensure more winnings and fewer losses. Our reliable guidance will lead you to continuous profits for your efforts.
+            </p>
+            <p class="text-justify">
+                A trial will undoubtedly convince you of the reliability and accuracy of our predictions. Share the good news with your friends and experience continuous victories with Real Fixed Matches Information Center. May your betting tickets always be green.
+            </p>
+            <br>
+            <p class="text-justify">
+                Best Regards,
+            </p>
+            <p class="text-justify">
+                Real Fixed Matches Information Centre.
+            </p>
+            <p class="text-justify">
+            If you have any questions, <a href="https://t.me/+MERPUkXPnWBiNzQ0">you can contact us here.</a>.
+            </p>
+            </div>
+            </div>
+            <style>
+                        .qlabel, .alabel {
+                            padding: 6px 10px;
+                            background: red;
+                            color: #fff;
+                        }
+                        .alabel{
+                            background: black;
+                            font-weight: bold;
+                        }
+                        #accordion .card {
+                            margin-bottom:15px;
+                        }
+                    </style>
+
+            </div>
+
+
+            <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-8 mt-4">
+            <div class="section-title mb-2">
+            <h2 class="px-4">Expertly Curated Matches with Great Odds</h2>
+            </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 ">
+            <p class="text-justify px-4">
+                We are excited to introduce you to Daily Value Bet, where we bring you a carefully curated combination of matches featuring odds of 4.50 and above. Our mission is to turn your passion for sports into potential profit through strategic, responsible betting.
+            </p>
+            <p class="text-justify px-4">
+                Our team of experienced experts works tirelessly to identify matches that offer excellent value. We understand the intricacies of the betting world and strive to find opportunities that provide a balance between attractive odds and a low reasonable level of risk. Each value bet presented to you is meticulously analysed, ensuring you receive the best possible recommendations.
+            </p>
+            <p class="text-justify px-4">
+                We believe in the importance of responsible betting. Our objective is not only to help you enjoy your sports betting experience but also to ensure it remains sustainable and low-risk. By focusing on matches with substantial odds, we aim to maximise your potential returns while maintaining a controlled level of risk.
+            </p>
+            <p class="text-justify px-4">
+                Join us at Daily Value Bet and take the first step towards making informed betting decisions. Let our expertise work for you, turning your sports passion into rewarding outcomes.
+            </p>
+
+            <p class="text-center">On <a href="/archieve">THIS LINK</a> are all sold HT/FT Fixed Matches</p>
+            </div>
+            </div>
+    </article>
+
+
+
+            <!-- Contact Start -->
+            <div id="contact" class="container-fluid contact py-2" style="background-color: #f5f5f5;" >
+            <div class="container py-2">
+                <div class="row g-5">
+                    <h1 class="text-success mb-1 text-center">Contact</h1>
+                    <div class="col-xl-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="rounded p-3 mb-5" style="visibility: visible; background-color: #cdf6de">
+                                <h4 class="text-success mb-4">Get in Touch</h4>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="contact-add-item">
+                                            <div class="contact-icon text-primary mb-4">
+                                                <a class="btn btn-primary btn-lg-square  me-2" href="https://wa.me//447861660627"><i class="fab fa-whatsapp fs-4 text-white"></i></a>
+                                            </div>
+                                            <div>
+                                                <h4>whatsapp</h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="contact-add-item">
+                                            <div class="contact-icon text-primary mb-4">
+                                                <a class="btn btn-primary btn-lg-square " href="https://t.me/+MERPUkXPnWBiNzQ0"><i class="fab fa-telegram fs-4 text-light"> </i></a>
+                                            </div>
+                                            <div>
+                                                <h4>Telegram</h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="contact-add-item">
+                                            <div class="contact-icon text-primary mb-4">
+                                                <i class="fab fa-firefox-browser fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Real Fixed Information Center</h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight"  data-wow-delay="0.2s">
+                        <div class=" p-5 rounded h-100 wow fadeInUp" style="visibility: visible; background-color: #cdf6de" data-wow-delay="0.2s">
+                            <h4 class="text-primary">Send Your Message</h4>
+                            <p class="mb-4">You can reach us </a>.</p>
+                            <div >
+                                <style>
+                                    h5{
+                                    color: red;
+                                    }
+                                </style>
+                                {% for message in Messages %}
+                                <h5> {{message}}</h5>
+                                {% endfor %}
+                            </div>
+                            <form action='' method="POST">
+                                {% csrf_token %}
+                                <div class="row g-4">
+
+
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control border-0" id="email" name="email" required placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control border-0" placeholder="Leave a message here" name="message" id="message" style="height: 160px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact End -->
+
+
+            {% comment %} terms and condition {% endcomment %}
+
+            {% comment %} About {% endcomment %}
+
+            <section class="about px-1">
+                <article id="about">
+                    <h1 class="display-5 text-center link-body-emphasis text-success h1  py-3 mb-1">About</h1>
+
+
+                <p class="text-justify ">Football betting is an exhilarating experience, whether enjoying a rousing victory or enduring a crushing defeat. However, without proper guidance and knowledge, it can become a high-risk venture. Every day, football fans around the globe seek websites and platforms that offer accurate predictions and sustained profits over the long term.</p>
+                <p class="text-justify ">Our service offers precisely this guidance, providing reliable predictions to ensure your betting experience is both enjoyable and profitable. We understand that convenience is crucial, so we accept a wide range of payment methods, including all cryptocurrencies such as Bitcoin, Binance, and Paxful. Additionally, we accept payments through PayPal, Skrill, Neteller, Airtel Money, Mukuru, Vodafone, Mpesa, Eversend, Apple Pay, Wise, Western Union, Remitly, World Remit, Ria Money and Money Gram.</p>
+                <p class="text-justify ">Enjoy a secure and informed betting experience with our expert predictions. Join many football fans who trust our service to enhance their betting strategies.</p>
+                
+
+                
+                </article>
+            </section>
+
+            <section class="terms px-1">
+                <article id="terms">
+                    <h1 class="display-5 text-center link-body-emphasis text-success h1  py-3 mb-1">Terms and Conditions</h1>
+
+
+                <p class="text-center text-danger">See our terms and conditions before you become our customer!</p>
+                <a class="text-success" href="/terms&conditions">Terms and Conditions</a>
+                <p class="justify-content">
+                    By utilizing this website or potentially making a record and turning into a User, you acknowledge and consent to all terms, conditions, and notices contained or referred to on the website (“Terms of Use”). Read the accompanying Terms of Use cautiously. In case you do not consent to the Terms of Use, refrain from utilizing the services of this website. By utilizing, downloading in any capacity, without impediment, or receiving any help from this website, you consent to and are limited by these Terms of Use. 
+                </p>
+                <p class="justify-content">
+                    Real Fixed Matches Information Centre maintains all authority to change the Terms of Use whenever without earlier notification to any website guest (“User” or “you”). Hence, we urge you to review these Terms Use at whatever point you utilize our website. On the off chance that you penetrate any of the Terms of Use, your approval to utilize this website consequently ends
+                </p>
+                <p class="justify-content">
+                    Content on Real Fixed Matches Information Centre is not intended for anybody under 18 years of age.
+                </p>
+                
+                
+                <img class="align-center rounded mx-auto d-block" src="{% static "img/terms.jfif" %}" alt="">
+                <hr>
+                </article>
+            </section>
+
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+        <span class="text-light">Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+        
+        <a href="https://wa.me//447861660627" class="me-4 text-light text-reset">
+            <i class="fab fa-whatsapp text-light"></i>
+        </a>
+
+        <a href="https://t.me/+MERPUkXPnWBiNzQ0" class="me-4 text-reset">
+        <i class="fab fa-telegram text-light" ></i>
+        </a>
+
+
+    </div>
+    <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+    <div class="container col text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+        <!-- Grid column -->
+
+        <div class="col-md-6 col-lg-12 col-xl-6 mx-auto mb-4">
+            <!-- Content -->
+
+            <h6 class="text-uppercase text-light fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-light"></i>Real Fixed Matches
+            </h6>
+            <p class="text-light col-12">
+                Football betting is an exhilarating experience, whether enjoying a rousing victory or enduring a crushing defeat. However, without proper guidance and knowledge, it can become a high-risk venture. Every day, football fans around the globe seek websites and platforms that offer accurate predictions and sustained profits over the long term.
+                <br>
+Our service offers precisely this guidance, providing reliable predictions to ensure your betting experience is both enjoyable and profitable. We understand that convenience is crucial, so we accept a wide range of payment methods, including all cryptocurrencies such as Bitcoin, Binance, and Paxful. Additionally, we accept payments through PayPal, Skrill, Neteller, Airtel Money, Mukuru, Vodafone, Mpesa, Eversend, Apple Pay, Wise, Western Union, Remitly, World Remit, Ria Money and Money Gram.
+<br>
+Enjoy a secure and informed betting experience with our expert predictions. Join many football fans who trust our service to enhance their betting strategies.
+            </p>
+        </div>
+        <!-- Grid column -->
+
+
+
+        <!-- Grid column -->
+        <div class="col col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 text-light">Contact</h6>
+            <p class="text-light"><i class="fa fa-map-marker-alt me-3 text-light"></i> Birmingham B19 2SS, UK</p>
+            <p class="text-light"><i class="fas fa-phone me-3 text-light"></i> +44 78616 60627</p>
+            <p class="text-light"><i class="fas fa-envelope me-3 text-light"></i>realfixedinformationcentre@gmail.com</p>
+
+
+        </div>
+        <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+    </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center text-light p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-reset text-light fw-bold" href="/">Real Fixed Matches </a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    </body>
+
+</html>
